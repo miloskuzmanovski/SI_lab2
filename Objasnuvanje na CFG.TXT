@@ -1,0 +1,24 @@
+Броевите се подредени според тоа што заменуваат.
+
+1) List<Integer> result = new ArrayList<>();
+2.1) int i = 0
+2.2) i < timesList.size()
+2.3) i++
+3) int hr = timesList.get(i).getHours();
+   int min = timesList.get(i).getMinutes();
+   int sec = timesList.get(i).getSeconds();
+4) return result
+5) if (hr < 0 || hr > 24)
+6) if (hr < 0)
+7) else if (hr < 24)
+8) throw new RuntimeException("The hours are smaller than the minimum");
+9) throw new RuntimeException("The hours are grater than the maximum");
+10) else if (hr == 24 && min == 0 && sec == 0)
+11) if (min < 0 || min > 59)
+12) result.add(hr * 3600 + min * 60 + sec);
+13) throw new RuntimeException("The time is greater than the maximum");
+14) throw new RuntimeException("The minutes are not valid!");
+15) if (sec >= 0 && sec <= 59)
+16) result.add(hr * 3600 + min * 60 + sec);
+17) throw new RuntimeException("The seconds are not valid");
+18) } (for end)
